@@ -1,0 +1,48 @@
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+  	font-size: 15px;
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f7f7f7;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.set-border {
+    border-radius:8px;
+}
+
+.scaleHover:hover{
+    font-size:33px
+}
+
+.setButtonX{
+    text-align: end;
+    font-size: 29px;
+    float: right;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 11px;
+}
+
+#display-image{
+    width: 400px;
+    height: 225px;
+    border: 1px solid black;
+    background-position: center;
+    background-size: cover;
+  }
