@@ -15,7 +15,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -67,7 +67,7 @@
                     </form> --}}
 
                     <div class="login-form">
-                        <form enctype="multipart/form-data" action="/examples/actions/confirmation.php" style="position: relative" action="{{ route('login') }}" method="post">
+                        <form enctype="multipart/form-data" style="position: relative" action="{{ route('register') }}" method="post">
                             @csrf
                             <div class="scaleHover setButtonX">
                                 X
@@ -76,27 +76,27 @@
                             <p class="text-left">It's quick and easy</p>
                             <hr>
                             <div class="form-group" style="width: 49%;float: left;">
-                                <input id="email" placeholder="First name" type="email" class="set-border form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="first_name" placeholder="First name" type="text" class="set-border form-control @error('email') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
 
-                                @error('email')
+                                @error('first_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                             <div class="form-group" style="width: 49%;float: right;">
-                                <input id="email" placeholder="Last name" type="email" class="set-border form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <input id="last_name" placeholder="Last name" type="text" class="set-border form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
 
-                                @error('email')
+                                @error('last_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <input id="password" placeholder="Mobile number or email" type="password" class="set-border form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                <input id="email" placeholder="Mobile number or email" type="text" class="set-border form-control @error('email') is-invalid @enderror" name="email" required autocomplete="current-password">
 
-                                @error('password')
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -113,7 +113,7 @@
                             </div>
                             <div class="form-group">
                                 <p>Image Profile Upload</p>
-                                                                <input accept="image/*" type='file' id="imgInp"  class="form-control" required name="imgInp"/>
+                                <input accept="image/*" type='file' id="imgInp"  class="form-control" required name="imgInp"/>
                                 <br>
                                 <div class="uploadImage"></div>
 

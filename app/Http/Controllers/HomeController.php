@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $userLogin=auth()->user();
+        $postByUser=$userLogin->post;
+        return view('home',compact("userLogin","postByUser"));
     }
 }
