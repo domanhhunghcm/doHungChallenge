@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\post;
+use App\Models\follow;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -51,5 +52,10 @@ class User extends Authenticatable
     public function comment()
     {
         return $this->hasMany(comment::class,"user_id");
+    }
+
+    public function followUser()
+    {
+        return $this->hasMany(follow::class,"userDoFollow");
     }
 }

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\postController;
+use  App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/postController', [postController::class, 'create'])->name('create.post');
+Route::post('/commentSave', [CommentController::class, 'create'])->name('create.comment');
