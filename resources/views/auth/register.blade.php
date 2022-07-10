@@ -113,7 +113,7 @@
                             </div>
                             <div class="form-group">
                                 <p>Image Profile Upload</p>
-                                <input accept="image/*" type='file' id="imgInp"  class="form-control" required name="imgInp"/>
+                                <input accept="image/*" type='file' id="imgInp"  class="form-control" name="imgInp"/>
                                 <br>
                                 <div class="uploadImage"></div>
 

@@ -67,26 +67,14 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        // if($request['imgInp']){
-        //     var_dump($request['imgInp']);
-        //     die();
-        //     $file= $request['imgInp']->file('imgInp');
-        //     $filename= date('YmdHi').$file->getClientOriginalName();
-        //     $file-> move(public_path('public/Image'), $filename);
-        //     $request['imgInp']= $filename;
-        // }else{
-        //     $request['imgInp']="default";
-        // }
-
         if (request()->hasFile('imgInp')) {
             $file = request()->file('imgInp');
-    //            dd($file);
             $extension = $file->getClientOriginalExtension();
             $filename = date('YmdHi').$file->getClientOriginalName();
             $file->move('img/profile/', $filename);
             $saveIm=$filename;
         }else{
-            $saveIm="default";
+            $saveIm="2202.jpg";
         }
 
         return User::create([
