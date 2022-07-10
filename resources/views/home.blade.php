@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row justify-content-center" style="background-color: white;">
-    <i class="fa fa-home" style="font-size: 52px;"></i>
+    <a href="/home"><i class="fa fa-home" style="font-size: 52px;"></i></a>
  </div>
  <div class="allBody">
     {{-- proccess your follower --}}
