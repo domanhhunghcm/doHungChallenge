@@ -27,18 +27,15 @@ class HomeController extends Controller
     {
         $userLogin = auth()->user();
         $postByUser = $userLogin->post;
+            $followingUser=$userLogin->userFollow;
 
-        $followingUser = DB::table('users')->where('users.id', "=", $userLogin->id)
-            ->join('userfollows', 'users.id', '=', 'userfollows.userDoFollow')
-            ->select("userfollows.*")
-            ->pluck('userReciveFollow');
+
         $stack = array();
         for ($i = 0;$i < sizeof($followingUser);$i++)
         {
-            array_push($stack, $followingUser[$i]);
+            array_push($stack, $followingUser[$i]->userReciveFollow);
         }
         array_push($stack, $userLogin->id);
-
         //get user not follow
         $userNotFollow = user::whereNotIn('id', $stack)->get();
         $userList = User::where('id', '!=', $userLogin->id)
